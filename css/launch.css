@@ -1,0 +1,32 @@
+.section {
+
+}
+
+.speaker-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.speaker-section .header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.speaker-img {
+  float: left;
+  padding-top: 10px;
+}
+
+.speaker-img img {
+  display: block;
+  height: 125px;
+  width: 125px;
+}
+
+.speaker-description {
+  padding-left: 15px;
+  margin-left: 135px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
