@@ -65,6 +65,44 @@
 
 	};
 
+	/* =======================================
+	 * Scroll Spy
+	 * =======================================
+	 */
+	var handleScroll = function() {
+		// Floating Header
+		if ( $( window ).scrollTop() > 60 ) {
+			$( '.header-floating' ).addClass( 'floating' );
+		} else {
+			$( '.header-floating' ).removeClass( 'floating' );
+		}
+
+		if ( $(window).width() > 768 ){						
+			if ( $(".navbar").offset().top > 50 ) {
+				$(".navbar-fixed-top, .sign-up-btn, .navbar-logo2").addClass("top-nav-collapse");
+			} else {
+				$(".navbar-fixed-top, .sign-up-btn, .navbar-logo2").removeClass("top-nav-collapse");
+			}
+		} 
+		else {
+			$(".navbar-fixed-top, .sign-up-btn, .navbar-logo2").addClass("top-nav-collapse");
+		}		
+	};
+
+	var hasScrolled = false;
+
+	$(window).scroll(function() {
+	  hasScrolled = true;
+	});
+
+	setInterval(function() {
+	  if (hasScrolled) {
+	  	handleScroll();
+	    hasScrolled = false;
+	  }
+	}, 100);
+
+	/* doc ready stuff */
 	$( document ).on( 'ready', function() {
 
 		/* =======================================
@@ -152,38 +190,6 @@
             $(".round2-btn").removeClass("round-btn-active");
             $(".round3-btn").addClass("round-btn-active");
           })
-
-		/* =======================================
-		 * Scroll Spy
-		 * =======================================
-		 */
-		$( window ).on( 'scroll', function() {
-
-			// Floating Header
-			if ( $( window ).scrollTop() > 60 ) {
-				$( '.header-floating' ).addClass( 'floating' );
-			} else {
-				$( '.header-floating' ).removeClass( 'floating' );
-			}
-		});
-        
-        $(window).scroll(function() {
-				if($(window).width() > 768){						
-						if ($(".navbar").offset().top > 50) {
-							$(".navbar-fixed-top").addClass("top-nav-collapse");
-                            $(".sign-up-btn").addClass("top-nav-collapse");
-                            $(".navbar-logo2").addClass("top-nav-collapse");
-						} else {
-							$(".navbar-fixed-top").removeClass("top-nav-collapse");	
-                            $(".sign-up-btn").removeClass("top-nav-collapse");	
-                            $(".navbar-logo2").removeClass("top-nav-collapse");
-						}
-					}else{
-						$(".navbar-fixed-top").addClass("top-nav-collapse");
-                        $(".sign-up-btn").addClass("top-nav-collapse");
-                        $(".navbar-logo2").addClass("top-nav-collapse");
-					}		
-			});
 
 		/* =======================================
 		 * One Page Navigation
