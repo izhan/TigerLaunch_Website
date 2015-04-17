@@ -7,26 +7,30 @@
   padding-bottom: 50px;
 }
 
-.speaker-section .header {
-  text-align: center;
-  margin-bottom: 20px;
+.thumbnail-wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.speaker-img {
+.thumbnail-img {
   float: left;
   padding-top: 10px;
 }
 
-.speaker-img img {
+.thumbnail-img img {
   display: block;
   height: 125px;
   width: 125px;
 }
 
-.speaker-description {
+.thumbnail-content {
   padding-left: 15px;
   margin-left: 135px;
   font-size: 18px;
   line-height: 28px;
 }
 
+.competitor-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
