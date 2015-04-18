@@ -34,3 +34,13 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.speaker-section .thumbnail-content {
+  margin-left: 0;
+}
+
+@media (max-width: 620px) {
+  .competitor-section .thumbnail-content {
+    margin-left: 0;
+  }
+}
